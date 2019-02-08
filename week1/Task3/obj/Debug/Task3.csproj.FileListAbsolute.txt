@@ -1,0 +1,7 @@
+C:\Users\agent\Desktop\pp2\week1\Task3\bin\Debug\Task3.exe.config
+C:\Users\agent\Desktop\pp2\week1\Task3\bin\Debug\Task3.exe
+C:\Users\agent\Desktop\pp2\week1\Task3\bin\Debug\Task3.pdb
+C:\Users\agent\Desktop\pp2\week1\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
+C:\Users\agent\Desktop\pp2\week1\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
+C:\Users\agent\Desktop\pp2\week1\Task3\obj\Debug\Task3.exe
+C:\Users\agent\Desktop\pp2\week1\Task3\obj\Debug\Task3.pdb
