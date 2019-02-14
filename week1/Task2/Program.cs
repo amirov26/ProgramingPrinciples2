@@ -6,47 +6,34 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    class Program
+    class Student
     {
-
-        internal class Student
-        {
             string name;
             string id;
             int year;
 
-            public void GetName()
+            public Student(string n, string i) // constructor
             {
-                Console.WriteLine(name);
+                name = n;
+                id = i;
+            } 
+
+            public void GetInfo()
+            {
+                year = 2018;
+                for (int i = 0; i < 4; i++)
+                {
+                    Console.Write(name + " ");
+                    Console.Write(id + " ");
+                    Console.WriteLine(year);
+                    year++;
+                }
             }
 
-            public void GetId()
-            {
-                Console.WriteLine(id);
-            }
-
-            public void GetYear()
-            {
-                Console.WriteLine(year);
-            }
-
-            public Student() { name = "Dauren"; id = "18BD110809"; year = 2018; } // first constructor
-
-            public Student(string n, string i, int y) { name = n; id = i; year = y; } // second constructor
-
-
-
-
-        }
         static void Main(string[] args)
         {
-            Student Madi = new Student(); // call for first constructor
-
-            Student Aza = new Student("Aza", "2568512", 2015); // call for second constructor
-
-            Madi.GetName();
-            Aza.GetId();
-            Madi.GetYear();
+            Student s = new Student("Dauren", "18BD110809"); // call for constructor
+            s.GetInfo();
         }
     }
-}
+} 

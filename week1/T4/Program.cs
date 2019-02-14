@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task4
+namespace T4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine()); // n - is the size of our two-dimensional array(n*n)
+            int n = int.Parse(Console.ReadLine());
             int[,] a = new int[n, n];
-            for(int i = 0; i<n; i++) // cycle for rows
+            for(int i=0; i<n; i++)
             {
-                for(int j=0; j<i+1; j++) // cycle for columns
+                for(int j=0; j<i+1; j++)
                 {
                     Console.Write("[*]");
                 }
-                Console.WriteLine(); // new line(row)
+                Console.WriteLine();
             }
         }
     }

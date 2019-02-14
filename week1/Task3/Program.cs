@@ -10,19 +10,19 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()); // n - size of the array
             int[] a = new int[n];
-            string[] s = Console.ReadLine().Split();
-            for(int i = 0; i<n; i++)
+            string[] s = Console.ReadLine().Split(); // filling array and splitting the string
+            for (int i = 0; i<n; i++)
             {
-                a[i] = int.Parse(s[i]);
+                a[i] = int.Parse(s[i]); // converting elements of array from string to int
             }
             int z = n * 2;
-            int[] b = new int[z];
-            for(int i = 0; i<n; i++)
+            int[] b = new int[z]; //in second array we double previous size and call it z
+            for (int i = 0; i<n; i++)
             {
                 b[2*i] = a[i];
-                b[2 * i + 1] = a[i];
+                b[2 * i + 1] = a[i]; // we give the formula of array, where every element is repeated
             }
             for(int i = 0; i<z; i++)
             {
