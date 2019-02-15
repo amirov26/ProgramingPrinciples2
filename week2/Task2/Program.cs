@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Task2
 {
@@ -19,16 +20,24 @@ namespace Task2
         }
         static void Main(string[] args)
         {
-            string s = System.IO.File.ReadAllText(@"C:\Users\agent\Desktop\input.txt");
-            int[] a = new int[s.Length];
-            a = s.Split().Select(int.Parse).ToArray();
+            StreamReader sr = new StreamReader(@"C:\Users\agent\Desktop\input.txt");
+            string[] s = sr.ReadToEnd().Split();
+            int n = s.Count();
+            int[] a = new int[n];
             List<int> v = new List<int>();
             for(int i=0; i<a.Length;i++)
             {
+                a[i] = int.Parse(s[i]);
                 if (F1(a[i]) == true) v.Add(a[i]);
             }
-            var result = String.Join(" ", v.ToArray());
-            System.IO.File.WriteAllText(@"C:\Users\agent\Desktop\output.txt", result);
+            StreamWriter sw = new StreamWriter(@"C:\Users\agent\Desktop\output.txt");
+            for(int i=0; i<v.Count(); i++)
+            {
+                sw.Write(v[i] + " ");
+            }
+            sr.Close();
+            sw.Close();
+            Console.ReadKey();
         }
     }
 }

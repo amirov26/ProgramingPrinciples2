@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Task1
 {
@@ -18,8 +19,9 @@ namespace Task1
         }
         static void Main(string[] args)
         {
-            string s = System.IO.File.ReadAllText(@"C: \Users\agent\Desktop\palindrome.txt");
-            int n = s.Length;
+            StreamReader sr = new StreamReader(@"C: \Users\agent\Desktop\palindrome.txt");
+            string s = sr.ReadToEnd();
+            int n = s.Count();
             if (F1(s,n) == true)
             {
                 Console.WriteLine("Yes");
@@ -28,6 +30,7 @@ namespace Task1
             {
                 Console.WriteLine("No");
             }
+            sr.Close();
         }
     }
 }
