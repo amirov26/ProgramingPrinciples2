@@ -9,10 +9,10 @@ namespace Task2
     class Student
     {
             string name;
-            string id;
+            string id;      // global variables
             int year;
 
-            public Student(string n, string i) // constructor
+            public Student(string n, string i) // constructor with two parametres
             {
                 name = n;
                 id = i;
@@ -23,9 +23,9 @@ namespace Task2
                 year = 2018;
                 for (int i = 0; i < 4; i++)
                 {
-                    Console.Write(name + " ");
-                    Console.Write(id + " ");
-                    Console.WriteLine(year);
+                    Console.Write(name + " ");  // outputting name
+                    Console.Write(id + " ");   // outputting id
+                    Console.WriteLine(year);  // outputting year
                     year++;
                 }
             }

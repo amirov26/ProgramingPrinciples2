@@ -9,7 +9,7 @@ namespace Task3
 {
     class Program
     {
-        public static void Level(int level)
+        public static void Level(int level) // it is for spaces
         {
             for(int i=0; i<level; i++)
             {
@@ -18,12 +18,12 @@ namespace Task3
         }
         public static void Tree(DirectoryInfo path, int level)
         {
-            foreach(FileInfo f in path.GetFiles())
+            foreach(FileInfo f in path.GetFiles()) // this is to output files
             {
                 Level(level);
                 Console.WriteLine(f.Name);
             }
-            foreach(DirectoryInfo d in path.GetDirectories())
+            foreach(DirectoryInfo d in path.GetDirectories()) // this is to output directories
             {
                 Level(level);
                 Console.WriteLine(d.Name);
